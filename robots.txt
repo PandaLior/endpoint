@@ -1,0 +1,39 @@
+# Endpoint.US Robots.txt
+# Managed Security Services Provider
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://endpoint.us.com/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Allow indexing of all public content
+Allow: /services/
+Allow: /compliance/
+Allow: /industries/
+Allow: /geographic/
+Allow: /resources/
+Allow: /about/
+Allow: /blog/
+
+# Crawl delay (optional, adjust based on server capacity)
+# Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block malicious bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
