@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>{{PAGE_TITLE}} | {{SECONDARY_KEYWORD}} | Endpoint.US</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{META_KEYWORDS}}">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{PAGE_TITLE}} | Endpoint.US">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:image" content="https://endpoint.us.com/assets/images/og-image.jpg">
+    <meta property="og:site_name" content="Endpoint.US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{PAGE_TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="https://endpoint.us.com/assets/images/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Stylesheets -->
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://elfsightcdn.com">
+    <link rel="dns-prefetch" href="https://elfsightcdn.com">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {{SCHEMA_ORGANIZATION}},
+        {{SCHEMA_BREADCRUMB}},
+        {{SCHEMA_SPECIFIC}}
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/" aria-label="Endpoint Security - Home">
+                        <img src="/assets/images/logo.svg" alt="Endpoint.US Logo" width="200" height="60">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <!-- Main Navigation -->
+                <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-dropdown">
+                            <a href="/services/core-endpoint/" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="menu-column">
+                                        <h3>Endpoint Security</h3>
+                                        <ul>
+                                            <li><a href="/services/core-endpoint/">Managed Endpoint Security</a></li>
+                                            <li><a href="/services/core-endpoint/edr.html">EDR Services</a></li>
+                                            <li><a href="/services/core-endpoint/epp.html">EPP Services</a></li>
+                                            <li><a href="/services/core-endpoint/mdm.html">Mobile Device Management</a></li>
+                                            <li><a href="/services/core-endpoint/zero-trust.html">Zero Trust Security</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                        <h3>Threat Protection</h3>
+                                        <ul>
+                                            <li><a href="/services/threat-protection/">Ransomware Protection</a></li>
+                                            <li><a href="/services/threat-protection/malware-removal.html">Malware Removal</a></li>
+                                            <li><a href="/services/threat-protection/phishing.html">Phishing Protection</a></li>
+                                            <li><a href="/services/threat-protection/apt-defense.html">APT Defense</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                        <h3>Managed Operations</h3>
+                                        <ul>
+                                            <li><a href="/services/managed-operations/">MSSP Services</a></li>
+                                            <li><a href="/services/managed-operations/24x7-monitoring.html">24/7 Monitoring</a></li>
+                                            <li><a href="/services/managed-operations/soc.html">SOC Services</a></li>
+                                            <li><a href="/services/managed-operations/incident-response.html">Incident Response</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                        <h3>Testing & BCDR</h3>
+                                        <ul>
+                                            <li><a href="/services/testing/">Penetration Testing</a></li>
+                                            <li><a href="/services/testing/vulnerability-assessment.html">Vulnerability Assessment</a></li>
+                                            <li><a href="/services/bcdr/">Backup & Recovery</a></li>
+                                            <li><a href="/services/bcdr/dr-planning.html">Disaster Recovery</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/compliance/hipaa/" class="nav-link">Compliance <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="/compliance/hipaa/">HIPAA Compliance</a></li>
+                                    <li><a href="/compliance/financial/">PCI-DSS & Financial</a></li>
+                                    <li><a href="/compliance/general/soc2.html">SOC 2 Compliance</a></li>
+                                    <li><a href="/compliance/general/nist.html">NIST Framework</a></li>
+                                    <li><a href="/compliance/general/cmmc.html">CMMC</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/industries/healthcare/" class="nav-link">Industries <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="/industries/healthcare/">Healthcare</a></li>
+                                    <li><a href="/industries/financial/">Financial Services</a></li>
+                                    <li><a href="/industries/legal/">Legal Services</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/resources/threat-intelligence/" class="nav-link">Resources <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="/resources/threat-intelligence/">Threat Intelligence</a></li>
+                                    <li><a href="/resources/best-practices/">Best Practices</a></li>
+                                    <li><a href="/resources/comparisons/">Solution Comparisons</a></li>
+                                    <li><a href="/blog/">Blog</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <a href="/about/security-assessment.html" class="btn btn-primary nav-cta">Free Security Assessment</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+            <div class="container">
+                <div class="trust-items">
+                    <div class="trust-item">
+                        <img src="/assets/images/certifications/soc2.svg" alt="SOC 2 Certified" width="40" height="40">
+                        <span>SOC 2 Certified</span>
+                    </div>
+                    <div class="trust-item">
+                        <img src="/assets/images/certifications/cissp.svg" alt="CISSP Certified" width="40" height="40">
+                        <span>CISSP Certified</span>
+                    </div>
+                    <div class="trust-item">
+                        <img src="/assets/images/certifications/ceh.svg" alt="CEH Certified" width="40" height="40">
+                        <span>CEH Certified</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-stat"><strong>24/7</strong> SOC Monitoring</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-stat"><strong>15+ Years</strong> MSP Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                {{BREADCRUMB_ITEMS}}
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        {{MAIN_CONTENT}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <!-- Footer Main -->
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h3>Core Services</h3>
+                    <ul>
+                        <li><a href="/services/core-endpoint/">Managed Endpoint Security</a></li>
+                        <li><a href="/services/core-endpoint/edr.html">EDR Services</a></li>
+                        <li><a href="/services/managed-operations/">MSSP Services</a></li>
+                        <li><a href="/services/testing/">Penetration Testing</a></li>
+                        <li><a href="/services/bcdr/">Backup & Disaster Recovery</a></li>
+                        <li><a href="/services/threat-protection/">Ransomware Protection</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Compliance</h3>
+                    <ul>
+                        <li><a href="/compliance/hipaa/">HIPAA Compliance</a></li>
+                        <li><a href="/compliance/financial/pci-dss.html">PCI-DSS</a></li>
+                        <li><a href="/compliance/general/soc2.html">SOC 2</a></li>
+                        <li><a href="/compliance/general/nist.html">NIST Framework</a></li>
+                        <li><a href="/compliance/general/cmmc.html">CMMC</a></li>
+                        <li><a href="/compliance/general/gdpr.html">GDPR</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Industries</h3>
+                    <ul>
+                        <li><a href="/industries/healthcare/">Healthcare</a></li>
+                        <li><a href="/industries/healthcare/hospital.html">Hospitals</a></li>
+                        <li><a href="/industries/healthcare/medical-practice.html">Medical Practices</a></li>
+                        <li><a href="/industries/financial/">Financial Services</a></li>
+                        <li><a href="/industries/legal/">Legal Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="/resources/threat-intelligence/">Threat Intelligence</a></li>
+                        <li><a href="/resources/best-practices/">Best Practices</a></li>
+                        <li><a href="/resources/comparisons/">Solution Comparisons</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/about/case-studies.html">Case Studies</a></li>
+                        <li><a href="/about/testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/about/why-choose-us.html">Why Choose Us</a></li>
+                        <li><a href="/about/certifications.html">Certifications</a></li>
+                        <li><a href="/about/soc-overview.html">Our SOC</a></li>
+                        <li><a href="/about/contact.html">Contact Us</a></li>
+                        <li><a href="/about/security-assessment.html">Free Assessment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trust Elements -->
+            <div class="footer-trust">
+                <div class="certifications">
+                    <h4>Certifications & Compliance</h4>
+                    <div class="cert-logos">
+                        <img src="/assets/images/certifications/soc2-badge.svg" alt="SOC 2 Type II Certified" width="80" height="80">
+                        <img src="/assets/images/certifications/cissp-badge.svg" alt="CISSP Certified Professionals" width="80" height="80">
+                        <img src="/assets/images/certifications/ceh-badge.svg" alt="CEH Certified Ethical Hackers" width="80" height="80">
+                        <img src="/assets/images/certifications/hipaa-compliant.svg" alt="HIPAA Compliant" width="80" height="80">
+                        <img src="/assets/images/certifications/pci-dss.svg" alt="PCI-DSS" width="80" height="80">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 Endpoint.US. All rights reserved.</p>
+                    <nav aria-label="Legal navigation">
+                        <ul class="legal-links">
+                            <li><a href="/legal/privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="/legal/terms-of-service.html">Terms of Service</a></li>
+                            <li><a href="/legal/sla.html">Service Level Agreement</a></li>
+                            <li><a href="/legal/security-practices.html">Security Practices</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-tagline">
+                    <p><strong>Endpoint.US</strong> - Expert managed endpoint security, compliance, and testing services for regulated industries nationwide.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Elfsight Contact Form Script -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+
+    <!-- Main JavaScript -->
+    <script src="/assets/js/navigation.js" defer></script>
+    <script src="/assets/js/animations.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
