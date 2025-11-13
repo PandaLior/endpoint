@@ -11,7 +11,7 @@ Generates unique, category-appropriate content for:
 
 import os
 
-# Header and Footer templates (same as generate_all_unique.py)
+# Header and Footer templates (matching home page exactly)
 HEADER = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,22 +33,128 @@ HEADER = '''<!DOCTYPE html>
                         <h1 style="font-size: 2rem; color: #0A2540; margin: 0; font-weight: 700;">EndPoint<span style="color: #4A90E2;">US</span></h1>
                     </a>
                 </div>
-                <nav class="main-navigation">
+
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <nav class="main-navigation" role="navigation" aria-label="Main navigation">
                     <ul class="nav-menu">
-                        <li><a href="/services/core-endpoint/" class="nav-link">Services</a></li>
-                        <li><a href="/compliance/hipaa/" class="nav-link">Compliance</a></li>
-                        <li><a href="/industries/healthcare/" class="nav-link">Industries</a></li>
-                        <li><a href="/about/" class="nav-link">About</a></li>
-                        <li><a href="/about/contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/services/core-endpoint/" class="nav-link">Services <span class="dropdown-arrow">▼</span></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="menu-column">
+                                        <h3>Endpoint Security</h3>
+                                        <ul>
+                                            <li><a href="/services/core-endpoint/">Managed Endpoint Security</a></li>
+                                            <li><a href="/services/core-endpoint/edr.html">EDR Services</a></li>
+                                            <li><a href="/services/core-endpoint/epp.html">EPP Services</a></li>
+                                            <li><a href="/services/core-endpoint/mdm.html">Mobile Device Management</a></li>
+                                            <li><a href="/services/core-endpoint/zero-trust.html">Zero Trust Security</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                        <h3>Threat Protection</h3>
+                                        <ul>
+                                            <li><a href="/services/threat-protection/">Ransomware Protection</a></li>
+                                            <li><a href="/services/threat-protection/malware-removal.html">Malware Removal</a></li>
+                                            <li><a href="/services/threat-protection/phishing.html">Phishing Protection</a></li>
+                                            <li><a href="/services/threat-protection/apt-defense.html">APT Defense</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                        <h3>Managed Operations</h3>
+                                        <ul>
+                                            <li><a href="/services/managed-operations/">MSSP Services</a></li>
+                                            <li><a href="/services/managed-operations/24x7-monitoring.html">24/7 Monitoring</a></li>
+                                            <li><a href="/services/managed-operations/soc.html">SOC Services</a></li>
+                                            <li><a href="/services/managed-operations/incident-response.html">Incident Response</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-column">
+                                        <h3>Testing & BCDR</h3>
+                                        <ul>
+                                            <li><a href="/services/testing/">Penetration Testing</a></li>
+                                            <li><a href="/services/testing/vulnerability-assessment.html">Vulnerability Assessment</a></li>
+                                            <li><a href="/services/bcdr/">Backup & Recovery</a></li>
+                                            <li><a href="/services/bcdr/dr-planning.html">Disaster Recovery</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/compliance/hipaa/" class="nav-link">Compliance <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="/compliance/hipaa/">HIPAA Compliance</a></li>
+                                    <li><a href="/compliance/financial/">PCI-DSS & Financial</a></li>
+                                    <li><a href="/compliance/general/soc2.html">SOC 2 Compliance</a></li>
+                                    <li><a href="/compliance/general/nist.html">NIST Framework</a></li>
+                                    <li><a href="/compliance/general/cmmc.html">CMMC</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/industries/healthcare/" class="nav-link">Industries <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="/industries/healthcare/">Healthcare</a></li>
+                                    <li><a href="/industries/financial/">Financial Services</a></li>
+                                    <li><a href="/industries/legal/">Legal Services</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="/resources/threat-intelligence/" class="nav-link">Resources <span class="dropdown-arrow">▼</span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="/resources/threat-intelligence/">Threat Intelligence</a></li>
+                                    <li><a href="/resources/best-practices/">Best Practices</a></li>
+                                    <li><a href="/resources/comparisons/">Solution Comparisons</a></li>
+                                    <li><a href="/blog/">Blog</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/contact.html" class="nav-link">Contact</a>
+                        </li>
                     </ul>
-                    <a href="/about/security-assessment.html" class="btn btn-primary nav-cta">Free Assessment</a>
+
+                    <a href="/about/security-assessment.html" class="btn btn-primary nav-cta">Free Security Assessment</a>
                 </nav>
             </div>
         </div>
+
         <div class="trust-bar">
             <div class="container">
                 <div class="trust-items">
-                    <div class="trust-item">SOC 2 Certified | CISSP | CEH | 24/7 SOC</div>
+                    <div class="trust-item">
+                        <span>🛡️</span>
+                        <span>SOC 2 Certified</span>
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span>
+                        <span>CISSP Certified</span>
+                    </div>
+                    <div class="trust-item">
+                        <span>✓</span>
+                        <span>CEH Certified</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-stat"><strong>24/7</strong> SOC Monitoring</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-stat"><strong>15+ Years</strong> MSP Experience</span>
+                    </div>
                 </div>
             </div>
         </div>
